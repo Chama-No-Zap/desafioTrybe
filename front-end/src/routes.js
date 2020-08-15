@@ -6,7 +6,6 @@ const Routes = () => {
   return(
   <BrowserRouter>
     <Route exact path="/" component={LandingPage} />
-    <Route exact path="/login" component={} />
   </BrowserRouter>
   );
 };
