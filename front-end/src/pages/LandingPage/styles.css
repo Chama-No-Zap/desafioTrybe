@@ -1,1 +1,49 @@
-/* lalal */
+.contact a {
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.find-drinks-btn {
+  background-color: var(--color-box-base);
+  padding: 2rem;
+  margin-top: 7rem;
+  margin-bottom: 9rem;
+}
+
+.find-drinks-btn a {
+  font: 800 3.5rem 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+
+.infos {
+  background: var(--color-background-infos);
+  margin-top: 4.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.infos > div {
+  margin-left: 3vw;
+  font: var(--font-1);
+}
+
+.logo-name {
+  margin-top: 13rem;
+  margin-left: 2rem;
+  font: 800 4.5rem 'Spartan', sans-serif;
+}
+
+.partner-link {
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.partner-link a {
+  font: 800 2.5rem 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+
+.sub-links a {
+  font: var(--font-2);
+  text-decoration: none;
+}
