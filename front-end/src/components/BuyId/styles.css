@@ -1,3 +1,41 @@
+.id-page {
+  background-image: url('../../images/background-1.png') !important;
+  background-repeat: no-repeat;
+  min-height: 800px;
+  background-size: cover;
+  overflow: hidden;
+}
+
 .qrCode {
   height: 100px;
 }
+
+.id-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.circle {
+  text-align: center;
+  background-color: #ffbd59;
+  border-bottom: 30px solid rgb(75, 87, 100);
+  border-left: 30px solid white;
+  border-radius: 50%;
+  border-right: 30px solid rgb(75, 87, 100);
+  border-top: 30px solid white;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+}
+
+.id-container h2 {
+  margin: 6% auto;
+}
+
+.circle h1 {
+  position: relative;
+  top: 90px;
+  font-size: 4em;
+}
+

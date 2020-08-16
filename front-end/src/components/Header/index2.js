@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import BuyId from '../BuyId';
 import PartnerClients from '../PartnerClients';
 import PartnerStore from '../PartnerStores';
-import './styles.css'
 
 const checkbox = (produto, arr) => {
   return(
@@ -27,19 +26,13 @@ const Header = ({ PartnerInfo }) => {
   }, [PartnerInfo.productsAvaliable, agua, arr]);
 
   return (
-    <React.Fragment>
-      <div className="heading b-shadow ">
-        <img
-          className="perfil-picture"
-          src={PartnerInfo.profilePicture} alt={`foto de ${PartnerInfo.name}`}
-        />
-        <span className="subtitle">{`${PartnerInfo.name}`}</span>
-      </div>
+    <div>
+      {<img src={PartnerInfo.profilePicture} alt={`foto de ${PartnerInfo.name}`} />}
       <span>
         {infos}
         {console.log("a",infos)}
       </span>
-        {/* Selecione o(s) iten(s) que vocẽ tem disponível(eis):
+        Selecione o(s) iten(s) que vocẽ tem disponível(eis):
         {checkbox('Àgua', setArr)}
         {checkbox('Refrigerante', setArr)}
         {checkbox('Suco', setArr)}
@@ -47,8 +40,8 @@ const Header = ({ PartnerInfo }) => {
         <button onClick={() => setInfostoshow(BuyId(PartnerInfo))}>ID de compra</button>
         <button onClick={() => setInfostoshow(<PartnerClients />)}>Clientes</button>
         <button onClick={() => setInfostoshow(<PartnerStore />)}>Lojas Parceiras</button>
-      </footer> */}
-    </React.Fragment>
+      </footer>
+    </div>
   )
 };
 
