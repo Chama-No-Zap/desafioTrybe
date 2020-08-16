@@ -1,0 +1,49 @@
+.header-payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ff6000;
+  margin-bottom: 15px;
+}
+
+.header-payment h2 {
+  color: white;
+}
+
+.info-payment {
+  background-color: white;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20% auto 20% auto;
+  flex-direction: column;
+}
+
+.container-payment {
+}
+
+.logo-card {
+  margin-top: 15px;
+}
+
+.request-information {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  flex-direction: column;
+}
+
+button {
+  background-color: rgb(243, 189, 12);
+  height: 50px;
+  width: 90px;
+  border-radius: 7px;
+  font-size: 17px;
+  text-align: center;
+  color: white;
+}
