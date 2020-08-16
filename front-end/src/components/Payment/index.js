@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import '../../assets/styles/global.css';
 
 const Payment = () => {
   return (
@@ -31,7 +32,7 @@ const Payment = () => {
           type="button"
           onClick={() => alert('Compra realizada com sucesso!')}
         >
-          PAGAR
+          <strong>PAGAR</strong>
         </button>
       </div>
     </div>

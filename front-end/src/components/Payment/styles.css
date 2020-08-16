@@ -1,6 +1,6 @@
 .header-payment {
   align-items: center;
-  background-color: #ff6000;
+  background: var(--color-background-infos);
   display: flex;
   justify-content: space-around;
   margin-bottom: 15px;
@@ -55,7 +55,7 @@ span {
 }
 
 button {
-  background-color: rgb(243, 189, 12);
+  background: var(--color-background);
   border-radius: 7px;
   height: 60px;
   color: white;
