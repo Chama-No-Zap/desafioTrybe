@@ -1,0 +1,67 @@
+.header-payment {
+  align-items: center;
+  background: var(--color-background-infos);
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.header-payment h2 {
+  color: white;
+}
+
+.info-payment {
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  margin: 20% auto 20% auto;
+  width: 300px;
+}
+
+.container-payment {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.logo-card {
+  margin-top: 15px;
+}
+
+span {
+  color: red;
+}
+
+.request-information {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
+.request-information h1 {
+  color: black;
+  text-align: center;
+  text-decoration-style: solid;
+}
+
+.request-information h2 {
+  margin-left: 4%;
+}
+
+button {
+  background: var(--color-background);
+  border-radius: 7px;
+  height: 60px;
+  color: white;
+  cursor: pointer;
+  font-size: 25px;
+  margin: auto;
+  text-align: center;
+  width: 150px;
+}
