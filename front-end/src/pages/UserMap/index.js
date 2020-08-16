@@ -1,46 +1,115 @@
-import React, { useState, useEffect} from "react";
+import React, { useState } from "react";
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 
-const getCoordinates = (setState) => {
-  navigator.geolocation.getCurrentPosition(
-    function(position) {
-      setState({
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      });
-    },
-    function(error) {
-      console.error("Error Code = " + error.code + " - " + error.message);
-    }
-  );
-}
+const markers = [
+  {
+    lat: -19.930693,
+    lng: -43.934909,
+  },
+  {
+    lat: -19.932977,
+    lng: -43.937686,
+  },
+  {
+    lat: -19.934443,
+    lng: -43.934534,
+  },
+  {
+    lat: -19.939882,
+    lng: -43.934737,
+  },
+  {
+    lat: -19.933639,
+    lng: -43.932935,
+  },
+];
 
-const UserMap = ({google}) => {
+const sellers = [
+  {
+    sellerName: "Breno",
+    products: ["Água", "Refrigente"],
+  },
+  {
+    sellerName: "Gustavo",
+    products: ["Água", "Refrigente", "Suco"],
+  },
+  {
+    sellerName: "Joaquim",
+    products: ["Água"],
+  },
+  {
+    sellerName: "Marco",
+    products: ["Água", "Refrigente"],
+  },
+  {
+    sellerName: "Ana",
+    products: ["Suco", "Refrigente"],
+  },
+];
 
-  const [state, setState] = useState({})
+const onMarkerClick = (e, setState) => {
+  setState({
+    selectedPlace: e.name,
+    selectedPlaceProducts: e.products,
+    activeMarker: e.position,
+    showingInfoWindow: true,
+  });
+};
 
-  useEffect(() => {
-    getCoordinates(setState)
-  }, [])
+const onMapClicked = (state, setState) => {
+  if (state.showingInfoWindow) {
+    setState({
+      showingInfoWindow: false,
+      activeMarker: {},
+      selectedPlace: "",
+      selectedPlaceProducts: [],
+    });
+  }
+};
 
-  const { lng, lat } = state;
-
-  if (!state.lng) return "loading"
+const UserMap = (props) => {
+  const [state, setState] = useState({
+    showingInfoWindow: false,
+    activeMarker: {},
+    selectedPlace: "",
+    selectedPlaceProducts: [],
+  });
   return (
     <div>
+      {" "}
       <Map
-        google={google}
-        zoom={14}
-        initialCenter={{ lat, lng }}
+        google={props.google}
+        zoom={16}
+        initialCenter={{ lat: -19.934344, lng: -43.935169 }}
+        onClick={() => onMapClicked(state, setState)}
         mapTypeControl={false}
-        style={{ width: "100%", height: "100vh" }}
+        style={{ width: "414px", height: "100hv" }}
       >
-
+        {markers.map((marker, index) => (
+          <Marker
+            name={sellers[index].sellerName}
+            products={sellers[index].products}
+            key={`${sellers[index].sellerName}-${index}`}
+            position={marker}
+            onClick={(e) => onMarkerClick(e, setState)}
+          />
+        ))}
+        <InfoWindow
+          position={state.activeMarker}
+          visible={state.showingInfoWindow}
+        >
+          <div>
+            <h2>{state.selectedPlace}</h2>
+            {state.selectedPlaceProducts.map((product) => (
+              <p>{product}</p>
+            ))}
+          </div>
+        </InfoWindow>
       </Map>
     </div>
   );
-}
+};
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyCWoGhhC5t7sdxEZg1h3ggFz24RWoFHzuE"
+  apiKey: "AIzaSyCWoGhhC5t7sdxEZg1h3ggFz24RWoFHzuE",
 })(UserMap);
