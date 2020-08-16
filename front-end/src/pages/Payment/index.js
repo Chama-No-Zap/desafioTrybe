@@ -7,4 +7,4 @@ const PaymentPages = () => (
   </div>
 )
 
-export default PaymentPages; 
+export default PaymentPages;
