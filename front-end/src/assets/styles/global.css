@@ -20,7 +20,7 @@
   --color-box-footer: #FAFAFC;
 }
 
-html, body, #root {
+html, body {
   border: 0;
   box-sizing: border-box;
   height: 100vh;
@@ -37,10 +37,7 @@ body {
   justify-content: center;
 }
 
-body, 
-input, 
-button, 
-textarea {
+body, input, button, textarea {
   color: var(--color-text-base);
   font: 500 1.6rem Poppins;
 }

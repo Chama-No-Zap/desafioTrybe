@@ -20,7 +20,7 @@
   padding: 2rem;
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-top: 7.5rem;
+  margin-top: 5.5rem;
 }
 
 .find-drinks-btn a {
@@ -32,20 +32,20 @@
 .infos {
   background-color: var(--color-background-infos);
   margin-top: 4.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .infos > p {
   margin-left: 10vw;
-  margin-top: 1.5rem;
 }
 
 .logo-name {
-  padding-top: 7.5rem;
+  padding-top: 3rem;
   margin-left: 10vw;
 }
 
 .partner-link {
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 
 .partner-link a {
