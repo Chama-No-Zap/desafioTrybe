@@ -11,7 +11,7 @@ const Payment = () => {
           alt="Foto usuário"
           className="user"
         />
-        <h2>PAGAMENTO</h2>
+        <h2><strong>PAGAMENTO</strong></h2>
       </div>
       <div className="info-payment">
         <img
@@ -25,8 +25,8 @@ const Payment = () => {
         <p>VAL 04/25  CVC 549</p>
       </div>
       <div className="request-information">
-        <h2><strong>PEDIDO: 2x ÁGUA MINERAL AMA</strong></h2>
-        <h3>TOTAL: R$ 4,00</h3>
+        <h2><strong> * PEDIDO: 2x ÁGUA MINERAL <span>AMA</span></strong></h2>
+        <h1>TOTAL: R$ 4,00</h1>
         <button
           type="button"
           onClick={() => alert('Compra realizada com sucesso!')}

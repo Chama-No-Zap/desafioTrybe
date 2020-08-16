@@ -1,8 +1,8 @@
 .header-payment {
-  display: flex;
   align-items: center;
-  justify-content: space-around;
   background-color: #ff6000;
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 15px;
 }
 
@@ -11,39 +11,57 @@
 }
 
 .info-payment {
+  align-items: center;
   background-color: white;
-  width: 300px;
-  height: auto;
   border-radius: 10px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  height: auto;
   justify-content: center;
   margin: 20% auto 20% auto;
-  flex-direction: column;
+  width: 300px;
 }
 
 .container-payment {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
 
 .logo-card {
   margin-top: 15px;
 }
 
+span {
+  color: red;
+}
+
 .request-information {
   background: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
   flex-direction: column;
+  height: 300px;
+}
+
+.request-information h1 {
+  color: black;
+  text-align: center;
+  text-decoration-style: solid;
+}
+
+.request-information h2 {
+  margin-left: 4%;
 }
 
 button {
   background-color: rgb(243, 189, 12);
-  height: 50px;
-  width: 90px;
   border-radius: 7px;
-  font-size: 17px;
-  text-align: center;
+  height: 60px;
   color: white;
+  cursor: pointer;
+  font-size: 25px;
+  margin: auto;
+  text-align: center;
+  width: 150px;
 }
