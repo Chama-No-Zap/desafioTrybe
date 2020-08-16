@@ -1,61 +1,49 @@
 .contact a {
   align-items: center;
-  background: var(--color-secundary);
-  border: 0;
-  border-radius: 0.8rem;
-  color: var(--color-a-text);
   cursor: pointer;
-  display: flex;
-  font: 700 1.4rem Archivo;
-  height: 5.6rem;
-  justify-content: space-evenly;
   text-decoration: none;
-  transition: 0.2s;
-  width: 20rem;
 }
 
 .find-drinks-btn {
   background-color: var(--color-box-base);
-  border-radius: 20px;
   padding: 2rem;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  margin-top: 5.5rem;
+  margin-top: 7rem;
+  margin-bottom: 9rem;
 }
 
 .find-drinks-btn a {
-  color: var(--color-button-text);
-  font: 700 3rem Archivo;
+  font: 800 3.5rem 'Open Sans', sans-serif;
   text-decoration: none;
 }
 
 .infos {
-  background-color: var(--color-background-infos);
+  background: var(--color-background-infos);
   margin-top: 4.5rem;
   padding-bottom: 0.5rem;
 }
 
 .infos > div {
-  margin-left: 10vw;
+  margin-left: 3vw;
+  font: var(--font-1);
 }
 
 .logo-name {
-  padding-top: 3rem;
-  margin-left: 10vw;
+  margin-top: 13rem;
+  margin-left: 2rem;
+  font: 800 4.5rem 'Spartan', sans-serif;
 }
 
 .partner-link {
-  padding-top: 3rem;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 .partner-link a {
-  color: var(--color-button-text);
-  font: 700 2.5rem Archivo;
+  font: 800 2.5rem 'Open Sans', sans-serif;
   text-decoration: none;
 }
 
 .sub-links a {
-  color: var(--color-button-text);
-  font: 700 1.5rem Archivo;
+  font: var(--font-2);
   text-decoration: none;
 }
