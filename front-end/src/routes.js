@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import Partner from './pages/Partner';
+import UserMap from './pages/UserMap';
 
 const Routes = () => {
   return(
@@ -16,6 +17,7 @@ const Routes = () => {
       <Route path="/Feedbacks" component={LandingPage} />
       <Route path="/FindSellerHelp" component={LandingPage} />
       <Route path="/RequirementsHelp" component={LandingPage} />
+      <Route path="/map" component={UserMap} />
       <Route path="/:id" component={Partner} />
       <Route component={NotFound} />
     </Switch>
