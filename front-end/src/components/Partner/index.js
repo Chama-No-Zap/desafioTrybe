@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import BuyId from '../BuyId';
 import './styles.css'
 
 const Partner = ({ PartnerInfo }) => {
-  useEffect(() => {
-  }, [PartnerInfo.productsAvaliable]);
-
   return (
     <React.Fragment>
       <div className="heading b-shadow ">
