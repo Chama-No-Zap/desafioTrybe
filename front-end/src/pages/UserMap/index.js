@@ -1,17 +1,21 @@
 import React, { useState, useEffect} from "react";
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 
-const getCoordinates = () => {
-  return navigator.geolocation.getCurrentPosition(
-    (position) => {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
-      return position.coords.latitude
+const getCoordinates = (setState) => {
+  navigator.geolocation.getCurrentPosition(
+    function(position) {
+      setState({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      });
+    },
+    function(error) {
+      console.error("Error Code = " + error.code + " - " + error.message);
     }
-  )
+  );
 }
 
-const UserMap = (props) => {
+const UserMap = ({google}) => {
 
   const [state, setState] = useState({
     lat: -19.92,
@@ -19,17 +23,18 @@ const UserMap = (props) => {
   })
 
   useEffect(() => {
-    console.log(getCoordinates())
+    getCoordinates(setState)
   }, [])
 
+  const { lng, lat } = state;
 
   return (
     <div>
-      {" "}
+      {console.log(state)}
       <Map
-        google={props.google}
+        google={google}
         zoom={14}
-        initialCenter={{ lat: -19.92, lng: -43.93 }}
+        initialCenter={{ lat, lng }}
         mapTypeControl={false}
         style={{ width: "100%", height: "100vh" }}
       >
