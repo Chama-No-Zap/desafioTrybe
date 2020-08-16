@@ -1,1 +1,61 @@
-/* lalal */
+.contact a {
+  align-items: center;
+  background: var(--color-secundary);
+  border: 0;
+  border-radius: 0.8rem;
+  color: var(--color-a-text);
+  cursor: pointer;
+  display: flex;
+  font: 700 1.4rem Archivo;
+  height: 5.6rem;
+  justify-content: space-evenly;
+  text-decoration: none;
+  transition: 0.2s; 
+  width: 20rem;
+}
+
+.find-drinks-btn {
+  background-color: var(--color-box-base);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 7.5rem;
+}
+
+.find-drinks-btn a {
+  color: var(--color-button-text);
+  font: 700 3rem Archivo;
+  text-decoration: none;
+}
+
+.infos {
+  background-color: var(--color-background-infos);
+  margin-top: 4.5rem;
+}
+
+.infos > p {
+  margin-left: 10vw;
+  margin-top: 1.5rem;
+}
+
+.logo-name {
+  padding-top: 7.5rem;
+  margin-left: 10vw;
+}
+
+.partner-link {
+  padding-top: 4rem;
+}
+
+.partner-link a {
+  color: var(--color-button-text);
+  font: 700 2.5rem Archivo;
+  text-decoration: none;
+}
+
+.sub-links a {
+  color: var(--color-button-text);
+  font: 700 1.5rem Archivo;
+  text-decoration: none;
+}
