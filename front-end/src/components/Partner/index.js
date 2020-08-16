@@ -17,9 +17,9 @@ const Header = ({ PartnerInfo }) => {
   const [infos, setInfostoshow] = useState(BuyId(PartnerInfo));
   const [arr, setArr] = useState([]);
 
-  const [agua, setAgua] = useState(PartnerInfo.productsAvaliable.map((el) => el === "Àgua" ? true : false));
-  const [refri, setRefri] = useState(false);
-  const [suco, setSuco] = useState(false);
+  const [agua] = useState(PartnerInfo.productsAvaliable.map((el) => el === "Àgua" ? true : false));
+  // const [refri, setRefri] = useState(false);
+  // const [suco, setSuco] = useState(false);
 
   useEffect(() => {
     console.log(PartnerInfo.productsAvaliable)
@@ -39,15 +39,6 @@ const Header = ({ PartnerInfo }) => {
         {infos}
         {console.log("a",infos)}
       </span>
-        {/* Selecione o(s) iten(s) que vocẽ tem disponível(eis):
-        {checkbox('Àgua', setArr)}
-        {checkbox('Refrigerante', setArr)}
-        {checkbox('Suco', setArr)}
-      <footer>
-        <button onClick={() => setInfostoshow(BuyId(PartnerInfo))}>ID de compra</button>
-        <button onClick={() => setInfostoshow(<PartnerClients />)}>Clientes</button>
-        <button onClick={() => setInfostoshow(<PartnerStore />)}>Lojas Parceiras</button>
-      </footer> */}
     </React.Fragment>
   )
 };

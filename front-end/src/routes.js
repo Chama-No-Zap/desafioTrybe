@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
-import Partner from './pages/Partner';
+import Partner from './pages/PartnerAuthentication';
 
 const Routes = () => {
   return(

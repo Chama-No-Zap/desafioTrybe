@@ -1,13 +1,8 @@
-.id-page {
-  background-image: url('../../images/background-1.png') !important;
-  background-repeat: no-repeat;
-  min-height: 800px;
-  background-size: cover;
-  overflow: hidden;
-}
-
 .qrCode {
-  height: 100px;
+  align-self: flex-end;
+  margin: 15% 5%;
+  height: 10em;
+  border-radius: 6px;
 }
 
 .id-container {
@@ -15,17 +10,16 @@
   flex-direction: column;
 }
 
-
 .circle {
   text-align: center;
   background-color: #ffbd59;
-  border-bottom: 30px solid rgb(75, 87, 100);
+  border-bottom: 30px solid var(--color-text-base);
   border-left: 30px solid white;
   border-radius: 50%;
-  border-right: 30px solid rgb(75, 87, 100);
+  border-right: 30px solid var(--color-text-base);
   border-top: 30px solid white;
-  width: 350px;
-  height: 350px;
+  width: 15em;
+  height: 15em;
   margin: auto;
 }
 
@@ -35,7 +29,7 @@
 
 .circle h1 {
   position: relative;
-  top: 90px;
-  font-size: 4em;
+  top: 55px;
+  font-size: 3em;
 }
 

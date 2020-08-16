@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Partners from '../../fakeUsersdatabase/Partners';
-import Header from '../../components/Header';
+import Partner from '../../components/Partner';
 
-const Partner = () => {
+const Authentication = () => {
   const [partner, setPartner] = useState(null);
 
   useEffect(() => {
@@ -12,9 +12,9 @@ const Partner = () => {
   return (
     partner !== null && partner !== undefined &&
     <div>
-      <Header PartnerInfo={partner} />
+      <Partner PartnerInfo={partner} />
     </div>
   )
 }
 
-export default Partner;
+export default Authentication;
