@@ -1,6 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import wpp from "../../assets/images/icons/whatsapp.svg";
 import "./styles.css";
 
 const linksBtn = (className, link, text) => {
@@ -10,6 +9,24 @@ const linksBtn = (className, link, text) => {
     </div>
   );
 };
+
+const contact = () => (
+  <Fragment>
+    <div>Contato</div>
+    <div className="contact">
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href={`https://wa.me/973481195`}
+      >
+        (31) 97348-1195
+      </a>
+    </div>
+    <div className="sub-links">
+      <a href="mailto:email@contato.com">email@contato.com</a>
+    </div>
+  </Fragment>
+);
 
 const LandingPage = () => {
   return (
@@ -36,19 +53,7 @@ const LandingPage = () => {
             "Quais requisitos pra ser um parceiro?"
           )}
         </div>
-        <div>Contato</div>
-        <div className="contact">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href={`https://wa.me/973481195`}
-          >
-            (31) 97348-1195
-          </a>
-        </div>
-        <div className="sub-links">
-          <a href="mailto:email@contato.com">email@contato.com</a>
-        </div>
+        {contact()}
       </div>
     </div>
   );

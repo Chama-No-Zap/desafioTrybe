@@ -16,9 +16,9 @@ const Header = ({ PartnerInfo }) => {
   const [infos, setInfostoshow] = useState(BuyId(PartnerInfo));
   const [arr, setArr] = useState([]);
 
-  const [agua, setAgua] = useState(PartnerInfo.productsAvaliable.map((el) => el === "Àgua" ? true : false));
-  const [refri, setRefri] = useState(false);
-  const [suco, setSuco] = useState(false);
+  const [agua] = useState(PartnerInfo.productsAvaliable.map((el) => el === "Àgua" ? true : false));
+  // const [refri, setRefri] = useState(false);
+  // const [suco, setSuco] = useState(false);
 
   useEffect(() => {
     console.log(PartnerInfo.productsAvaliable)
