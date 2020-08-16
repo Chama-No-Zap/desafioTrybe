@@ -37,7 +37,6 @@ const LandingPage = () => {
           </a>
         </div>
         <div>email@contato.com</div>
-        
       </div>
     </div>
   )

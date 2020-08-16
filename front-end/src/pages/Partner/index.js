@@ -4,11 +4,11 @@ import Header from '../../components/Header';
 
 const Partner = () => {
   const [partner, setPartner] = useState(null);
-  
+
   useEffect(() => {
     setPartner(Partners.find((el) => Number(window.location.pathname.split('/')[1]) === el.id));
   }, []);
-  
+
   return (
     partner !== null && partner !== undefined &&
     <div>
