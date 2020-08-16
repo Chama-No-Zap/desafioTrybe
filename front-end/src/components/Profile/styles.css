@@ -1,0 +1,60 @@
+.photo {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 200px;
+  margin-top: -170px;
+  height: 100px;
+  border: 10px solid transparent;
+  background: linear-gradient(var(--color-primary), var(--color-primary), var(--color-secundary), var(--color-secundary));
+  border-top-color:  var(--color-primary);
+  border-bottom-color: var(--color-secundary);
+};
+
+.id-container {
+  display: flex;
+}
+
+.score {
+  margin-left: 250px;
+  margin-top: -50px;
+  text-align: center;
+  background-color: #ffbd59;
+  border-radius: 200px;
+  height: 80px;
+  width: 80px;
+  border: 10px solid transparent;
+  border-left-color: linear-gradient(var(--color-primary), var(--color-secundary));
+  border-right-color: linear-gradient(var(--color-primary), var(--color-secundary));
+  border-top-color:  var(--color-primary);
+  border-bottom-color: var(--color-secundary);
+};
+
+.score h1 {
+  position: relative;
+  top: 55px;
+  font-size: 3em;
+}
+
+.salesQnt {
+  margin-left: 20px;
+  margin-top: 50px;
+  text-align: center;
+  background-color: #ffbd59;
+  border-radius: 200px;
+  height: 80px;
+  width: 80px;
+  border: 10px solid transparent;
+  border-left-color: linear-gradient(var(--color-primary), var(--color-secundary));
+  border-right-color: linear-gradient(var(--color-primary), var(--color-secundary));
+  
+  border-top-color:  var(--color-primary);
+  border-bottom-color: var(--color-secundary);
+};
+
+.salesQnt h1 {
+  position: relative;
+  top: 55px;
+  font-size: 3em;
+}
+

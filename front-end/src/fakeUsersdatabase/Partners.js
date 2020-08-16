@@ -7,6 +7,10 @@ const Partners = ([
     latitude: null,
     longitude: null,
     buyId: 'S814l020',
+    score: 4.5,
+    salesQnt: 20,
+    email: 'email@email.com',
+    contact: '(31) 99575-XXXX'
   }
 ]);
 

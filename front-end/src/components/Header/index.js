@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import BuyId from '../BuyId';
 import PartnerClients from '../PartnerClients';
 import PartnerStore from '../PartnerStores';
+import Profile from '../Profile';
 
 const checkbox = (produto, arr) => {
   return(
@@ -27,18 +28,14 @@ const Header = ({ PartnerInfo }) => {
 
   return (
     <div>
-      {<img src={PartnerInfo.profilePicture} alt={`foto de ${PartnerInfo.name}`} />}
       <span>
         {infos}
       </span>
-        Selecione o(s) iten(s) que vocẽ tem disponível(eis):
-        {checkbox('Àgua', setArr)}
-        {checkbox('Refrigerante', setArr)}
-        {checkbox('Suco', setArr)}
       <footer>
         <button onClick={() => setInfostoshow(BuyId(PartnerInfo))}>ID de compra</button>
         <button onClick={() => setInfostoshow(<PartnerClients />)}>Clientes</button>
         <button onClick={() => setInfostoshow(<PartnerStore />)}>Lojas Parceiras</button>
+        <button onClick={() => setInfostoshow(Profile(PartnerInfo))}>Perfil</button>
       </footer>
     </div>
   )
