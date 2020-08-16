@@ -17,10 +17,7 @@ const getCoordinates = (setState) => {
 
 const UserMap = ({google}) => {
 
-  const [state, setState] = useState({
-    lat: -19.92,
-    lng: -43.93 
-  })
+  const [state, setState] = useState({})
 
   useEffect(() => {
     getCoordinates(setState)
@@ -28,9 +25,9 @@ const UserMap = ({google}) => {
 
   const { lng, lat } = state;
 
+  if (!state.lng) return "loading"
   return (
     <div>
-      {console.log(state)}
       <Map
         google={google}
         zoom={14}
