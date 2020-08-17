@@ -34,7 +34,7 @@ const LandingPage = () => {
       <h1 className="logo-name">AMBULABEV</h1>
       {linksBtn("find-drinks-btn", "FindDrinks", "Encontrar Bebidas")}
       <div className="infos">
-        <div>{linksBtn("partner-link", "BecomePartner", "Seja parceiro")}</div>
+        <div>{linksBtn("partner-link", "1", "Seja parceiro")}</div>
         <div>
           Links úteis
           {linksBtn("sub-links", "Devs", "Quem somos")}

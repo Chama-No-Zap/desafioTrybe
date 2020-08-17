@@ -54,7 +54,7 @@ span {
   margin-left: 4%;
 }
 
-button {
+.request-information button {
   background: var(--color-background);
   border-radius: 7px;
   height: 60px;

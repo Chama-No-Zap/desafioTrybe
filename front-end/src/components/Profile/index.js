@@ -6,7 +6,7 @@ import './styles.css'
 const Profile = (props) => {
   return (
     <div className='id-container'>
-      <p>Perfil</p>
+      <h1 className="text">Perfil</h1>
       <p>
         <div className='salesQnt'>
           <h1>{props.salesQnt}</h1>
@@ -16,18 +16,20 @@ const Profile = (props) => {
             <h1>{props.score}</h1>
           </div>
       </p>
-      <p>
-        <span>E-mail</span>
-        <input type='text' placeholder={props.email}></input>
-        <button onClick={() => alert('email alterado com sucesso')}>Editar</button>
-      </p>
-      <p>
-        <span>Contato</span>
-        <input type='text' placeholder={props.contact}></input>
-        <button onClick={() => alert('Contato alterado com sucesso')}>Editar</button>
-      </p>
-      <button type="button"><Link to="/linkd-do-mapa-de-lugares">Comprar produtos</Link></button>
-      <button type="button" to="/linkd-do-mapa-de-lugares">Adicionar produtos</button>
+      <div className='inputs-center'>
+        <p>
+          <span>E-mail</span>
+          <input className='real-input' type='text' placeholder={props.email} required></input>
+          <button className='btn' onClick={() => alert('email alterado com sucesso')}>Editar</button>
+        </p>
+        <p>
+          <span>Contato</span>
+          <input className='real-input' type='text' placeholder={props.contact}></input>
+          <button className='btn' onClick={() => alert('Contato alterado com sucesso')}>Editar</button>
+        </p>
+      </div>
+      <button className='btn' type="button"><Link to="/StoresMap">Comprar produtos</Link></button>
+      <button className='btn' type="button" to="/linkd-do-mapa-de-lugares">Adicionar produtos</button>
     </div>
   )
 };

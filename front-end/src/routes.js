@@ -5,6 +5,8 @@ import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import Partner from './pages/PartnerAuthentication';
 import PaymentPages from './pages/Payment';
+import UserMap from './pages/UserMap';
+import StoresMap from './pages/StoresMap';
 
 const Routes = () => {
   return(
@@ -18,6 +20,8 @@ const Routes = () => {
       <Route path="/FindSellerHelp" component={LandingPage} />
       <Route path="/RequirementsHelp" component={LandingPage} />
       <Route path="/Payment" component={PaymentPages} />
+      <Route path="/map" component={UserMap} />
+      <Route path="/StoresMap" component={StoresMap} />
       <Route path="/:id" component={Partner} />
       <Route component={NotFound} />
     </Switch>
