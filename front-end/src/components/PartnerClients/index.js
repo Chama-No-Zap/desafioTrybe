@@ -1,40 +1,40 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-const PartnerClients = () => {
-  const persons = [
-    {
-      id: 1,
-      name: 'Breno',
-      distance: '100m',
-      showProducts: ["Àgua ", "Refri ", "Suco"]
-    },
-    {
-      id: 2,
-      name:'Lucas',
-      distance: '100m',
-      showProducts: ["Àgua ", "Refri ", "Suco"]
-    },
-    {
-      id: 3,
-      name:'Diego',
-      distance: '100m',
-      showProducts: ["Suco"]
-    },
-    {
-      id: 4,
-      name:'Henrique',
-      distance: '100m',
-      showProducts: ["Àgua ", "Suco"]
-    },
-    {
-      id: 5,
-      name:'Henrique',
-      distance: '100m',
-      showProducts: ["Àgua"]
-    }
-  ];
+const persons = [
+  {
+    id: 1,
+    name: 'Breno',
+    distance: '100m',
+    showProducts: ["Àgua ", "Refri ", "Suco"]
+  },
+  {
+    id: 2,
+    name:'Lucas',
+    distance: '100m',
+    showProducts: ["Àgua ", "Refri ", "Suco"]
+  },
+  {
+    id: 3,
+    name:'Diego',
+    distance: '100m',
+    showProducts: ["Suco"]
+  },
+  {
+    id: 4,
+    name:'Henrique',
+    distance: '100m',
+    showProducts: ["Àgua ", "Suco"]
+  },
+  {
+    id: 5,
+    name:'Henrique',
+    distance: '100m',
+    showProducts: ["Àgua"]
+  }
+];
 
+const PartnerClients = () => {
   const [ProductSellected, setProductSellected] = useState({});
   return (
     <div>

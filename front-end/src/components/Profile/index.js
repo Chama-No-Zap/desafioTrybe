@@ -11,7 +11,7 @@ const Profile = (props) => {
         <div className='salesQnt'>
           <h1>{props.salesQnt}</h1>
         </div>
-        <img className='photo' src={props.profilePicture} />
+        <img className='photo' src={props.profilePicture} alt={props.name} />
           <div className='score'>
             <h1>{props.score}</h1>
           </div>
