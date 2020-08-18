@@ -1,0 +1,14 @@
+.heading {
+  align-items: center;
+  background-color: var(--color-background);
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  width: 380px;
+}
+
+.box {
+  color: var(--color-text-base);
+  cursor: pointer;
+  font-weight: 700;
+}
