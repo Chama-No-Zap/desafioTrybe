@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Redirect } from 'react-router-dom';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 import Header from '../../components/Header';
 const markers = [
@@ -67,7 +66,6 @@ const onMapClicked = (state, setState) => {
     });
   }
 };
-
 const UserMap = (props) => {
   const [state, setState] = useState({
     showingInfoWindow: false,
@@ -75,11 +73,9 @@ const UserMap = (props) => {
     selectedPlace: "",
     selectedPlaceProducts: [],
   });
-
   const categories = ["Suco", "Água", "Refrigerante"];
   return (
     <div>
-      {" "}
       <Header categories={categories}/>
       <Map
         google={props.google}
