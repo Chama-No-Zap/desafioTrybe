@@ -1,0 +1,103 @@
+.photo {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 200px;
+  margin-top: -150px;
+  height: 100px;
+  border: 10px solid transparent;
+  background: linear-gradient(var(--color-primary), var(--color-primary), var(--color-secundary), var(--color-secundary));
+  border-top-color:  var(--color-primary);
+  border-bottom-color: var(--color-secundary);
+};
+
+.id-container {
+  padding: 0.5em;
+  max-width: 700px;
+  display: flex;
+}
+
+.score {
+  position: relative;
+  margin-left: 380px;
+  margin-top: -70px;
+  text-align: center;
+  background-color: #ffbd59;
+  border-radius: 200px;
+  height: 80px;
+  width: 80px;
+  border: 10px solid transparent;
+  border-left-color: linear-gradient(var(--color-primary), var(--color-secundary));
+  border-right-color: linear-gradient(var(--color-primary), var(--color-secundary));
+  border-top-color:  var(--color-primary);
+  border-bottom-color: var(--color-secundary);
+};
+
+.score h1 {
+  position: relative;
+  top: 55px;
+  font-size: 3em;
+}
+
+.salesQnt {
+  margin-left: 20px;
+  margin-top: 50px;
+  text-align: center;
+  background-color: #ffbd59;
+  border-radius: 200px;
+  height: 80px;
+  width: 80px;
+  border: 10px solid transparent;
+  border-left-color: linear-gradient(var(--color-primary), var(--color-secundary));
+  border-right-color: linear-gradient(var(--color-primary), var(--color-secundary));
+  border-top-color:  var(--color-primary);
+  border-bottom-color: var(--color-secundary);
+};
+
+.salesQnt h1 {
+  position: relative;
+  top: 55px;
+  font-size: 3em;
+}
+
+.text {
+  align-self: center;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.inputs-center{
+  align-self: center;
+}
+
+.btn {
+  top: 50%;
+  left: 50%;
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.real-input {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}

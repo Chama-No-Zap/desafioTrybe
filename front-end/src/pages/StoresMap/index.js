@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { Redirect } from 'react-router-dom';
-import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
+import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 import Header from '../../components/Header';
-import InfoWindow from './InfoWindowEx';
 
-const markers = [
+const stores = [
   {
     lat: -19.930693,
     lng: -43.934909,
@@ -29,24 +27,24 @@ const markers = [
 
 const sellers = [
   {
-    sellerName: "Breno",
-    products: ["Água", "Refrigente"],
+    stoeName: "Bebidas SL",
+    products: ["Água: R$: 0.99", "Refrigente: R$: 1.99"],
   },
   {
-    sellerName: "Gustavo",
-    products: ["Água", "Refrigente", "Suco"],
+    stoeName: "Distribuidora AM",
+    products: ["Água: R$: 0.99", "Refrigente: R$: 1.99", "Suco: R$: 2.39"],
   },
   {
-    sellerName: "Joaquim",
-    products: ["Água"],
+    stoeName: "Mercado Sparta",
+    products: ["Água: R$: 0.99"],
   },
   {
-    sellerName: "Marco",
-    products: ["Água", "Refrigente"],
+    stoeName: "Store",
+    products: ["Água: R$: 0.99", "Refrigente: R$: 1.99"],
   },
   {
-    sellerName: "Ana",
-    products: ["Suco", "Refrigente"],
+    stoeName: "Drinks 24h",
+    products: ["Suco: R$: 2.39", "Refrigente: R$: 1.99"],
   },
 ];
 
@@ -69,19 +67,17 @@ const onMapClicked = (state, setState) => {
     });
   }
 };
-const UserMap = (props) => {
+
+const StoresMap = (props) => {
   const [state, setState] = useState({
     showingInfoWindow: false,
     activeMarker: {},
     selectedPlace: "",
     selectedPlaceProducts: [],
   });
-  const [redirect, setRedirect] = useState(false);
-  const categories = ["Suco", "Água", "Refrigerante"];
-  if (redirect) return <Redirect to="/Payment" />
   return (
     <div>
-      <Header categories={categories}/>
+      <Header categories={["700m", "2km", "5km ou mais"]}/>
       <Map
         google={props.google}
         zoom={16}
@@ -90,11 +86,11 @@ const UserMap = (props) => {
         mapTypeControl={false}
         style={{ width: "414px", height: "100hv" }}
       >
-        {markers.map((marker, index) => (
+        {stores.map((marker, index) => (
           <Marker
-            name={sellers[index].sellerName}
+            name={sellers[index].stoeName}
             products={sellers[index].products}
-            key={`${sellers[index].sellerName}-${index}`}
+            key={`${sellers[index].stoeName}-${index}`}
             position={marker}
             onClick={(e) => onMarkerClick(e, setState)}
           />
@@ -102,14 +98,12 @@ const UserMap = (props) => {
         <InfoWindow
           position={state.activeMarker}
           visible={state.showingInfoWindow}
-
         >
           <div>
             <h2>{state.selectedPlace}</h2>
             {state.selectedPlaceProducts.map((product) => (
               <p>{product}</p>
             ))}
-            <button onClick={() => setRedirect(true)}>COMPRAR</button>
           </div>
         </InfoWindow>
       </Map>
@@ -119,4 +113,4 @@ const UserMap = (props) => {
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyCWoGhhC5t7sdxEZg1h3ggFz24RWoFHzuE",
-})(UserMap);
+})(StoresMap);

@@ -3,12 +3,12 @@
   width: 4em;
 }
 
-.heading {
+.head {
   background-color: white;
   display: flex;
   justify-content: space-between;
   padding: 0.5em;
-  width: 100%;
+  max-width: 414px;
 }
 
 .subtitle {
@@ -18,5 +18,13 @@
 }
 
 .b-shadow {
-  box-shadow: 0px -1px 5px 3px #ffbd59;
+  box-shadow: 0px -1px 5px 3px var(--color-background);
+}
+
+.f-btn {
+  background-color: var(--color-box-base);
+  border: none;
+  border-radius: 4px;
+  margin: 0 5px;
+  padding: 5px;
 }
