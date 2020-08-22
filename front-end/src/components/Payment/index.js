@@ -31,7 +31,7 @@ const infoPayment = () => (
   </div>
 );
 
-const requestInfo = () => (
+const requestInfo = (setRedirect) => (
   <div className='request-information'>
     <h2>
       <strong>
@@ -53,7 +53,7 @@ const Payment = () => {
     <div className='container-payment'>
       {header()}
       {infoPayment()}
-      {requestInfo()}
+      {requestInfo(setRedirect)}
     </div>
   );
 };
