@@ -1,8 +1,8 @@
-import React from "react";
-import Map from "../../components/Map";
-import { stores } from "../../fakeUsersdatabase/partners";
-import InfoWindow from "../../utils/InfoWindowEx";
-import { Marker } from "google-maps-react";
+import React from 'react';
+import Map from '../../components/Map';
+import { stores } from '../../fakeUsersdatabase/partners';
+import InfoWindow from '../../utils/InfoWindowEx';
+import { Marker } from 'google-maps-react';
 
 const markerProps = (data, index, onClick) => (
   <Marker
