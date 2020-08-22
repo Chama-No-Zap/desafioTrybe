@@ -93,7 +93,6 @@ export const stores = [
     email: "email@email.com",
     contact: "(31) 99575-XXXX",
   },
-  ,
   {
     id: 2,
     name: "Mercearia do Antonio",
