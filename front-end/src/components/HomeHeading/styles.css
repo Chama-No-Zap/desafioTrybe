@@ -1,0 +1,10 @@
+.home-header {
+  background-color: white;
+  box-shadow: 0 1px 4px white , 0 0px 0 0 white;
+  display: flex;
+}
+
+.home-item {
+  padding: 5px;
+  margin-left: 10%;
+}

@@ -9,6 +9,7 @@
   padding: 2rem;
   margin-top: 7rem;
   margin-bottom: 9rem;
+  width: 350px;
 }
 
 .find-drinks-btn a {
@@ -46,4 +47,63 @@
 .sub-links a {
   font: var(--font-2);
   text-decoration: none;
+}
+
+.home-background {
+  background-image: url(./foto.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.typing-animation {
+  animation: blinkCursor 900ms infinite normal, typing 4s 1s normal;
+  animation-fill-mode: forwards;
+  border-right: 1px solid black;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10em;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+
+@media screen and ( min-width: 700px ) {
+  .infos {
+    margin-top: 10%;
+    width: 100%;
+  }
+
+  .find-drinks-btn {
+    border-radius: 5px;
+    max-width: 700px;
+    margin: 10% 10px;
+  }
+
+  .find-drinks-btn:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+
+  }
+
+  .logo-name {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
 }
