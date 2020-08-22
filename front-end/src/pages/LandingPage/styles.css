@@ -5,11 +5,24 @@
 }
 
 .find-drinks-btn {
-  background-color: var(--color-box-base);
-  padding: 2rem;
-  margin-top: 7rem;
-  margin-bottom: 9rem;
-  width: 350px;
+  background-image: url(../../assets/images/icons/toque.png);
+  background-size: 2em;
+  background-repeat: no-repeat;
+  background-position: right;
+  animation: changeColor 2s 0.5s alternate infinite;
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin: 7rem 1rem 9rem;
+  max-width: 400px;
+}
+
+@keyframes changeColor {
+  from {
+    background-color:#eba81a;
+  }
+  to {
+    background-color: var(--color-background);
+  }
 }
 
 .find-drinks-btn a {
@@ -18,13 +31,18 @@
 }
 
 .infos {
+  padding: 10px;
   background: var(--color-background-infos);
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 4.5rem;
   padding-bottom: 0.5rem;
+  position: fixed;
+  bottom: 0;
 }
 
 .infos > div {
-  margin-left: 3vw;
+  margin: 0 40px;
   font: var(--font-1);
 }
 
@@ -40,7 +58,7 @@
 }
 
 .partner-link a {
-  font: 800 2.5rem 'Open Sans', sans-serif;
+  font: 800 1rem 'Open Sans', sans-serif;
   text-decoration: none;
 }
 
@@ -50,9 +68,10 @@
 }
 
 .home-background {
-  background-image: url(./foto.jpg);
+  background-image: url(./../../assets/images/home-background.jpg);
   background-position: center;
   background-size: cover;
+  min-height: 700px;
 }
 
 .typing-animation {
@@ -83,7 +102,6 @@
   }
 }
 
-
 @media screen and ( min-width: 700px ) {
   .infos {
     margin-top: 10%;
@@ -91,8 +109,6 @@
   }
 
   .find-drinks-btn {
-    border-radius: 5px;
-    max-width: 700px;
     margin: 10% 10px;
   }
 

@@ -40,7 +40,6 @@ const LandingPage = () => {
       <HomeHeading title="AMBULABEV"/>
       {linksBtn("find-drinks-btn", "map", "Encontrar Bebidas")}
       <div className="infos">
-        <div>{linksBtn("partner-link", "1", "Seja parceiro")}</div>
         <div>
           Links úteis
           {linksBtn("sub-links", "Devs", "Quem somos")}
@@ -59,7 +58,14 @@ const LandingPage = () => {
             "Quais requisitos pra ser um parceiro?"
           )}
         </div>
-        {contact()}
+        <div>
+          {contact()}
+        </div>
+
+          <div>
+            Trabalhe conosco
+            {linksBtn("sub-links", "1", "Seja Parceiro")}
+          </div>
       </div>
     </div>
   );
