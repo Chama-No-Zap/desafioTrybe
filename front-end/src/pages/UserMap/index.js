@@ -55,6 +55,7 @@ const UserMap = (props) => {
           />
         ))}
         <InfoWindow
+        
           position={state.activeMarker}
           visible={state.showingInfoWindow}
         >
