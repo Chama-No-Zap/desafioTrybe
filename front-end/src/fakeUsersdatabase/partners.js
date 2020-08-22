@@ -77,4 +77,83 @@ const partners = [
   },
 ];
 
+export const stores = [
+  {
+    id: 1,
+    name: "Bar do Zé",
+    profilePicture: null,
+    avaliableProducts: [{name: "Água", price: "0.79"}, {name: "Refrigente", price: "1.49"}, {name: "Suco", price: "1.69"}],
+    localization: {
+      lat: -19.930693,
+      lng: -43.934909,
+    },
+    buyId: "S814l020",
+    score: 4.5,
+    salesQnt: 20,
+    email: "email@email.com",
+    contact: "(31) 99575-XXXX",
+  },
+  ,
+  {
+    id: 2,
+    name: "Mercearia do Antonio",
+    profilePicture: null,
+    avaliableProducts: [{name: "Água", price: "0.69"}],
+    localization: {
+      lat: -19.932977,
+      lng: -43.937686,
+    },
+    buyId: "S814l021",
+    score: 3.5,
+    salesQnt: 250,
+    email: "email@email.com",
+    contact: "(31) 99775-XXXX",
+  },
+  {
+    id: 3,
+    name: "Lorem Ipsum Rock Bar",
+    profilePicture: null,
+    avaliableProducts: [{name: "Água", price: "0.79"}, {name: "Refrigente", price: "1.39"}],
+    localization: {
+      lat: -19.934443,
+      lng: -43.934534,
+    },
+    buyId: "S814l022",
+    score: 1.5,
+    salesQnt: 4,
+    email: "email@email.com",
+    contact: "(31) 99475-XXXX",
+  },
+  {
+    id: 4,
+    name: "Atacarejo da Cidade",
+    profilePicture: null,
+    avaliableProducts: [{name: "Refrigente", price: "1.69"}, {name: "Suco", price: "1.99"}],
+    localization: {
+      lat: -19.939882,
+      lng: -43.934737,
+    },
+    buyId: "S814l023",
+    score: 5,
+    salesQnt: 456,
+    email: "email@email.com",
+    contact: "(31) 99433-XXXX",
+  },
+  {
+    id: 5,
+    name: "Lanchonete do Pão de Queijo",
+    profilePicture: null,
+    avaliableProducts: [{name: "Água", price: "0.69"}, {name: "Suco", price: "1.79"}],
+    localization: {
+      lat: -19.933639,
+      lng: -43.932935,
+    },
+    buyId: "S814l024",
+    score: 4.9,
+    salesQnt: 645,
+    email: "email@email.com",
+    contact: "(31) 98773-XXXX",
+  },
+]
+
 export default partners;
