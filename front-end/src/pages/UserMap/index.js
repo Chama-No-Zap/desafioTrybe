@@ -1,54 +1,9 @@
 import React, { useState } from "react";
-import { Redirect } from 'react-router-dom';
+import { Redirect } from "react-router-dom";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
-import Header from '../../components/Header';
-import InfoWindow from './InfoWindowEx';
-
-const markers = [
-  {
-    lat: -19.930693,
-    lng: -43.934909,
-  },
-  {
-    lat: -19.932977,
-    lng: -43.937686,
-  },
-  {
-    lat: -19.934443,
-    lng: -43.934534,
-  },
-  {
-    lat: -19.939882,
-    lng: -43.934737,
-  },
-  {
-    lat: -19.933639,
-    lng: -43.932935,
-  },
-];
-
-const sellers = [
-  {
-    sellerName: "Breno",
-    products: ["Água", "Refrigente"],
-  },
-  {
-    sellerName: "Gustavo",
-    products: ["Água", "Refrigente", "Suco"],
-  },
-  {
-    sellerName: "Joaquim",
-    products: ["Água"],
-  },
-  {
-    sellerName: "Marco",
-    products: ["Água", "Refrigente"],
-  },
-  {
-    sellerName: "Ana",
-    products: ["Suco", "Refrigente"],
-  },
-];
+import partners from '../../fakeUsersdatabase/partners';
+import Header from "../../components/Header";
+import InfoWindow from "./InfoWindowEx";
 
 const onMarkerClick = (e, setState) => {
   setState({
@@ -78,10 +33,10 @@ const UserMap = (props) => {
   });
   const [redirect, setRedirect] = useState(false);
   const categories = ["Suco", "Água", "Refrigerante"];
-  if (redirect) return <Redirect to="/Payment" />
+  if (redirect) return <Redirect to="/Payment" />;
   return (
     <div>
-      <Header categories={categories}/>
+      <Header categories={categories} />
       <Map
         google={props.google}
         zoom={16}
@@ -90,19 +45,18 @@ const UserMap = (props) => {
         mapTypeControl={false}
         style={{ width: "414px", height: "100hv" }}
       >
-        {markers.map((marker, index) => (
+        {partners.map((partner, index) => (
           <Marker
-            name={sellers[index].sellerName}
-            products={sellers[index].products}
-            key={`${sellers[index].sellerName}-${index}`}
-            position={marker}
+            name={partner.name}
+            products={partner.avaliableProducts}
+            key={`${partner.name}-${index}`}
+            position={partner.localization}
             onClick={(e) => onMarkerClick(e, setState)}
           />
         ))}
         <InfoWindow
           position={state.activeMarker}
           visible={state.showingInfoWindow}
-
         >
           <div>
             <h2>{state.selectedPlace}</h2>
