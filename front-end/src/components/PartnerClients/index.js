@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
+import Partner from '../Partner';
+import Navigate from '../Navigate';
+import Authentication from '../../utils/PartnerAutentication';
 
 const persons = [
   {
@@ -36,8 +39,17 @@ const persons = [
 
 const PartnerClients = () => {
   const [ProductSellected, setProductSellected] = useState({});
-  return (
+  const [PartnerInfo, setPartnerInfo] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPartnerInfo(Authentication())
+    }, 100)
+  }, []);
+
+  return (PartnerInfo !== null && 
     <div>
+    {Partner(PartnerInfo)}
       {persons.map((el) => {
         return (
           <div onClick={() => setProductSellected(el.id === ProductSellected.id ? {} : el)} className='client-container'>
@@ -51,6 +63,7 @@ const PartnerClients = () => {
             }
           </div>);
       })}
+      <Navigate />
     </div>
   )
 };
