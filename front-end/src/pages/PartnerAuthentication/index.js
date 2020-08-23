@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Partners from '../../fakeUsersdatabase/Partners';
+import Partners from '../../fakeUsersdatabase';
 import Partner from '../../components/Partner';
 
 const Authentication = () => {

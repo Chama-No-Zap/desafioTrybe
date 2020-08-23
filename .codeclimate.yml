@@ -31,9 +31,9 @@ checks:
       threshold: # language-specific defaults. an override will affect all languages.
 exclude_patterns:
 - "**/*.test.js"
-- "src/serviceWorker.js"
-- "src/index.css"
-- "src/__tests__/"
+- "**/src/serviceWorker.js"
+- "**/src/index.css"
+- "**/src/__tests__/"
 plugins:
   editorconfig:
     enabled: true
