@@ -55,7 +55,7 @@ const PartnerClients = () => {
           <div onClick={() => setProductSellected(el.id === ProductSellected.id ? {} : el)} className='client-container'>
             <h1>{el.name}</h1>
             {
-              el.id === ProductSellected.id 
+              el.id === ProductSellected.id
               ?
                 <span className='client-container'>{el.showProducts.map((eli) => eli)}</span>
               :

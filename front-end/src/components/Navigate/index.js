@@ -1,23 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './styles.css';
+import qrCode from '../../assets/images/icons/qr-code.svg';
+import qrCodeClicked from '../../assets/images/icons/qr-code-clicked.svg';
+import clients from '../../assets/images/icons/clients.svg';
+import clientsClicked from '../../assets/images/icons/clients-clicked.svg';
+import stores from '../../assets/images/icons/find-stores.svg';
+import storesClicked from '../../assets/images/icons/find-stores-clicked.svg';
+import profile from '../../assets/images/icons/profile.svg';
+import profileClicked from '../../assets/images/icons/profile-clicked.svg';
 import { Link } from 'react-router-dom';
 
-const buttons = (btnClassName, text, link) => 
-  <button className={btnClassName}>
-    <Link to={`/${link}`} style={{textDecoration: 'none'}}>{text}</Link>
-  </button>
+const buttons = (btnClassName, text, link, img, clicked, prod, set) => 
+    <Link
+      onClick={() => set(text)}
+      className={btnClassName}
+      to={`/${link}`}
+      style={{textDecoration: 'none'}}
+    >
+    <img src={ prod===text ? clicked : img} className='image' alt={text}/>
+      <h6 className='text'>
+        {text}
+      </h6>
+    </Link>
 
 const Navigate = () => {
+  const [prodSelected, setProdSelected] = useState("ID de compra");
   return (
-    <React.Fragment>
-      <footer>
-        {buttons("f-btn", "ID de compra", '1/buyId')}
-        {buttons("f-btn", "Clientes", '1/clients')}
-        {buttons("f-btn", "Lojas Parceiras", '1/StoresMap')}
-        {buttons("f-btn", "Perfil", '1/profile')}
+      <footer className='footer-container'>
+        {buttons("f-btn", "ID de compra", '1/buyId', qrCode, qrCodeClicked, prodSelected, setProdSelected)}
+        {buttons("f-btn", "Clientes", '1/clients', clients, clientsClicked, prodSelected, setProdSelected)}
+        {buttons("f-btn", "Lojas Parceiras", '1/StoresMap', stores, storesClicked, prodSelected, setProdSelected)}
+        {buttons("f-btn", "Perfil", '1/profile', profile, profileClicked, prodSelected, setProdSelected)}
       </footer>
-    </React.Fragment>
   )
 };
 

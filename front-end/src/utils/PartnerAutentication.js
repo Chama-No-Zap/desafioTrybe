@@ -1,7 +1,7 @@
-import Partners from '../fakeUsersdatabase/Partners';
+import partners from '../fakeUsersdatabase';
 
 const Authentication = () => {
-  return Partners.find((el) => Number(window.location.pathname.split('/')[1]) === el.id);
+  return partners.find((el) => Number(window.location.pathname.split('/')[1]) === el.id);
 }
 
 export default Authentication;
