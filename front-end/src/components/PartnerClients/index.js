@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './styles.css';
+import Partner from '../Partner';
+import Navigate from '../Navigate';
+import PartnerContext from '../../Context/PartnerContext';
 
 const persons = [
   {
@@ -35,9 +38,12 @@ const persons = [
 ];
 
 const PartnerClients = () => {
+  const { partnerInfo } = useContext(PartnerContext);
   const [ProductSellected, setProductSellected] = useState({});
-  return (
+
+  return (partnerInfo !== null && 
     <div>
+    {Partner(partnerInfo)}
       {persons.map((el) => {
         return (
           <div onClick={() => setProductSellected(el.id === ProductSellected.id ? {} : el)} className='client-container'>
@@ -51,6 +57,7 @@ const PartnerClients = () => {
             }
           </div>);
       })}
+      <Navigate />
     </div>
   )
 };
