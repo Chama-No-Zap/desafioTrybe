@@ -26,14 +26,14 @@ const vendasMensais = [
 
 const chartComponent = (data, title) => (
   <Chart
-        width={'500px'}
+        width={'400px'}
         height={'300px'}
         chartType="PieChart"
         loader={<div>Carregando gráfico</div>}
         data={data}
         options={{
           title,
-          backgroundColor: 'transparent',
+
         }}
       />
 );
@@ -44,12 +44,14 @@ const BuyId = ({buyId}) => {
     <div className="id-page">
       <div className="id-container">
       <h2>ID DE COMPRAS</h2>
-        <div className="circle">
 
-          <h1>{buyId}</h1>
+        <div className="qr-code-container">
+          <div className="circle">
+            <h1>{buyId}</h1>
+          </div>
+          <img className='qrCode' src={qr} alt='qr-code' />
         </div>
       </div>
-        <img className='qrCode' src={qr} alt='qr-code' />
       <div className="graphic-container">
         {chartComponent(vendasDiarias, "Vendas Diárias")}
         {chartComponent(vendasSemanais, "Vendas Semanais")}

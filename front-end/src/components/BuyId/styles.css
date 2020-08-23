@@ -1,7 +1,5 @@
 .qrCode {
-  align-self: flex-end;
-  margin: 5% 5% 5%;
-  height: 10em;
+  height: 12em;
   border-radius: 6px;
 }
 
@@ -18,19 +16,19 @@
   border-radius: 50%;
   border-right: 30px solid var(--color-text-base);
   border-top: 30px solid white;
-  width: 15em;
-  height: 15em;
-  margin: auto;
+  width: 12em;
+  height: 12em;
+  margin: 1%;
 }
 
 .id-container h2 {
-  margin: 6% auto;
+  margin: 1% auto;
 }
 
 .circle h1 {
   position: relative;
   top: 55px;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .graphic-container {
@@ -39,4 +37,13 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding: 5px;
+}
+
+.qr-code-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
 }

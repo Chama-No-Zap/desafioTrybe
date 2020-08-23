@@ -37,10 +37,10 @@ const persons = [
 const PartnerClients = () => {
   const [ProductSellected, setProductSellected] = useState({});
   return (
-    <div>
+    <div className="clients-container">
       {persons.map((el) => {
         return (
-          <div onClick={() => setProductSellected(el.id === ProductSellected.id ? {} : el)} className='client-container'>
+          <div onClick={() => setProductSellected(el.id === ProductSellected.id ? {} : el)} className='clients-info'>
             <h1>{el.name}</h1>
             {
               el.id === ProductSellected.id
