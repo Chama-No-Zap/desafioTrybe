@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 
 import './styles.css';
 import qrCode from '../../assets/images/icons/qr-code.svg';
@@ -10,6 +10,7 @@ import storesClicked from '../../assets/images/icons/find-stores-clicked.svg';
 import profile from '../../assets/images/icons/profile.svg';
 import profileClicked from '../../assets/images/icons/profile-clicked.svg';
 import { Link } from 'react-router-dom';
+import PartnerContext from '../../Context/PartnerContext';
 
 const buttons = (btnClassName, text, link, img, clicked, prod, set) => 
     <Link
@@ -25,7 +26,8 @@ const buttons = (btnClassName, text, link, img, clicked, prod, set) =>
     </Link>
 
 const Navigate = () => {
-  const [prodSelected, setProdSelected] = useState("ID de compra");
+  const { prodSelected, setProdSelected } = useContext(PartnerContext);
+
   return (
       <footer className='footer-container'>
         {buttons("f-btn", "ID de compra", '1/buyId', qrCode, qrCodeClicked, prodSelected, setProdSelected)}

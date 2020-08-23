@@ -1,0 +1,26 @@
+.home-header {
+  background-color: white;
+  box-shadow: 0 1px 4px white , 0 0px 0 0 white;
+  display: flex;
+}
+
+.home-item {
+  padding: 5px;
+  margin-left: 2%;
+}
+
+.logo {
+  background-image: url(./../../assets/images/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 3%;
+  width: 100px;
+}
+
+.header-titles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+}

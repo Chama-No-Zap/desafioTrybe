@@ -1,11 +1,17 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import HomeHeading from "../../components/HomeHeading";
 import "./styles.css";
 
 const linksBtn = (className, link, text) => {
   return (
     <div className={className}>
-      <Link to={`/${link}`}>{text}</Link>
+      <Link
+
+        to={`/${link}`}
+      >
+        <p className={text === 'Encontrar Bebidas' ? "typing-animation line" : ""}>{text}</p>
+      </Link>
     </div>
   );
 };
@@ -30,11 +36,11 @@ const contact = () => (
 
 const LandingPage = () => {
   return (
-    <div>
-      <h1 className="logo-name">AMBULABEV</h1>
+    <div className="home-background">
+      <HomeHeading title="AMBULABEV"/>
       {linksBtn("find-drinks-btn", "map", "Encontrar Bebidas")}
       <div className="infos">
-        <div>{linksBtn("partner-link", "1/buyId", "Seja parceiro")}</div>
+        <div>{linksBtn("partner-link", "becomePartner", "Seja parceiro")}</div>
         <div>
           Links úteis
           {linksBtn("sub-links", "Devs", "Quem somos")}
@@ -53,7 +59,14 @@ const LandingPage = () => {
             "Quais requisitos pra ser um parceiro?"
           )}
         </div>
-        {contact()}
+        <div>
+          {contact()}
+        </div>
+
+          <div>
+            Trabalhe conosco
+            {linksBtn("sub-links", "1", "Seja Parceiro")}
+          </div>
       </div>
     </div>
   );

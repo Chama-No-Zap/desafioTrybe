@@ -1,6 +1,6 @@
 .qrCode {
   align-self: flex-end;
-  margin: 15% 5%;
+  margin: 5% 5% 5%;
   height: 10em;
   border-radius: 6px;
 }
@@ -31,4 +31,12 @@
   position: relative;
   top: 55px;
   font-size: 3em;
+}
+
+.graphic-container {
+  box-shadow: 0 1px 5px white , 10px 10px 0 0 white;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
