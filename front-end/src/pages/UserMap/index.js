@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Map from '../../components/Map';
-import partners from '../../fakeUsersdatabase/partners';
+import partners from '../../fakeUsersdatabase';
 import InfoWindow from '../../utils/InfoWindowEx';
 import { Marker } from 'google-maps-react';
+import Filters from '../../components/Filters';
 
 const markerProps = (data, index, onClick) => (
   <Marker
@@ -27,7 +28,10 @@ const infoWindow = (state, onClick) => (
 );
 
 const UserMap = () => (
-  <Map data={partners} markerProps={markerProps} infoWindow={infoWindow} />
+  <Fragment>
+    <Filters />
+    <Map data={partners} markerProps={markerProps} infoWindow={infoWindow} />
+  </Fragment>
 );
 
 export default UserMap;
