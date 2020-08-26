@@ -75,7 +75,7 @@
 }
 
 .typing-animation {
-  animation: blinkCursor 900ms infinite normal, typing 4s 1s normal;
+  animation: blinkCursor 900ms steps(40) infinite normal, typing 2s steps(40) 1s normal;
   animation-fill-mode: forwards;
   border-right: 1px solid black;
   margin: 0;

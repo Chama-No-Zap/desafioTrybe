@@ -47,21 +47,14 @@ const LandingPage = () => {
         </div>
         <div>
           Ajuda
-          {linksBtn(
-            "sub-links",
-            "FindSellerHelp",
-            "Como encontar um vendedor?"
-          )}
+          {linksBtn("sub-links","FindSellerHelp", "Como encontar um vendedor?")}
           {linksBtn(
             "sub-links",
             "RequirementsHelp",
             "Quais requisitos pra ser um parceiro?"
           )}
         </div>
-        <div>
-          {contact()}
-        </div>
-
+        <div>{contact()}</div>
           <div>
             Trabalhe conosco
             {linksBtn("sub-links", "1", "Seja Parceiro")}
