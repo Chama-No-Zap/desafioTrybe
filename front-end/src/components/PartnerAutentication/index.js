@@ -7,7 +7,7 @@ const PartnerAutentication = () => {
   const { email, password, setPartnerInfo, partnerInfo } = useContext(PartnerContext);
   setTimeout(() =>
   setPartnerInfo(partners
-    .find((el) => email === el.email && password === el.password) || false), 1000);
+    .find((el) => email === el.email && password === el.password)), 1000);
   
     return <div>
       {partnerInfo === '' && <div>carregando...</div>}

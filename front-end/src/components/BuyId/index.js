@@ -55,7 +55,6 @@ const BuyId = () => {
       <Navigate />
       <img className='qrCode' src={qr} alt='qr-code' />
       </div>
-        <img className='qrCode' src={qr} alt='qr-code' />
       <div className='graphic-container'>
         {chartComponent(vendasDiarias, 'Vendas Diárias')}
         {chartComponent(vendasSemanais, 'Vendas Semanais')}

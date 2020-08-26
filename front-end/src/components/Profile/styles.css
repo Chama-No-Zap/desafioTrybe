@@ -62,12 +62,14 @@
 
 .text {
   align-self: center;
-  font-size: 1.5em;
-  font-weight: 700;
+  font-size: 1em;
+  font-weight: 70;
+  margin-bottom: -10px;
 }
 
 .inputs-center{
   align-self: center;
+  padding-bottom: 80px;
 }
 
 .btn {

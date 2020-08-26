@@ -4,7 +4,6 @@ import { stores } from '../../fakeUsersdatabase';
 import InfoWindow from '../../utils/InfoWindowEx';
 import { Marker } from 'google-maps-react';
 import Filters from '../../components/Filters';
-import Navigate from '../../components/Navigate';
 
 const markerProps = (data, index, onClick) => (
   <Marker
@@ -33,7 +32,6 @@ const StoresMap = () => (
   <Fragment>
     <Filters />
     <Map data={stores} markerProps={markerProps} infoWindow={infoWindow} />
-    <Navigate />
   </Fragment>
 );
 
