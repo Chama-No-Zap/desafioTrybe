@@ -25,7 +25,9 @@ const infoWindow = (state, onClick) => (
     <div>
       <h2>{state.activeMarker.name}</h2>
       {(state.activeMarker.products || []).map((product) => (
-        <p>{product}</p>
+        <p>
+          {product.name} - R${product.price}
+        </p>
       ))}
       <button onClick={onClick}>COMPRAR</button>
     </div>
@@ -41,7 +43,11 @@ const UserMap = () => {
   return (
     <Fragment>
       <Filters />
-      <Map data={filterData(partners, filters)} markerProps={markerProps} infoWindow={infoWindow} />
+      <Map
+        data={filterData(partners, filters)}
+        markerProps={markerProps}
+        infoWindow={infoWindow}
+      />
     </Fragment>
   );
 };
