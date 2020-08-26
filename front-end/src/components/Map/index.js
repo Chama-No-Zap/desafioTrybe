@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { Map, GoogleApiWrapper } from "google-maps-react";
-import Header from "../../components/Header";
 
 const onMarkerClick = (e, setState) => {
   setState({

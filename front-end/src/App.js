@@ -1,11 +1,14 @@
-import React from 'react';
-import './assets/styles/global.css';
-import Routes from './routes';
+import React from "react";
+import "./assets/styles/global.css";
+import Routes from "./routes";
+import FiltersProvider from "./context/FiltersContext";
 
 function App() {
   return (
     <div className="container">
-      <Routes />
+      <FiltersProvider>
+        <Routes />
+      </FiltersProvider>
     </div>
   );
 }
