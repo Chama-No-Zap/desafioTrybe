@@ -1,7 +1,7 @@
 :root {
   font-size: 60%;
   --color-background: #ffd359;
-  --color-background-infos: linear-gradient(to right, #f3b633, #f3b633, #e9903d);;
+  --color-background-infos: linear-gradient(to right, #f3b633, #f3b633, #e9903d);
   --color-primary-light: #916BEA;
   --color-primary: #8257E5;
   --color-primary-dark: #774DD6;
