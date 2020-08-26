@@ -32,7 +32,7 @@ const UserMap = ({ google, data, markerProps, infoWindow }) => {
       initialCenter={{ lat: -19.934344, lng: -43.935169 }}
       onClick={() => onMapClicked(state, setState)}
       mapTypeControl={false}
-      style={{ width: "414px", height: "100hv" }}
+      style={{ width: "100hv", height: "100hv" }}
     >
       {data.map((partner, index) =>
         markerProps(partner, index, (e) => onMarkerClick(e, setState))
