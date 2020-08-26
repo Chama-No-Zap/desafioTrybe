@@ -8,7 +8,6 @@ const Filters = () => {
     <div>
       <h5 className="filter-title">Filtros</h5>
       <div className="filter-bar">
-        <input type="checkbox" name="" id="water" />
         <input
           type="checkbox"
           name=""
